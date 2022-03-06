@@ -1,8 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Layout from '../components/Layout'
 import Table from '../components/Table'
 import Client from '../core/Client'
+import Button from '../components/Button'
 
 export default function Home() {
   const clients = [
@@ -27,6 +26,9 @@ export default function Home() {
       text-white
     `}>
       <Layout title="Cadastro Simples">
+        <div className='flex justify-end'>
+          <Button color='green' className='mb-4'>Novo Cliente</Button>
+        </div>
         <Table clients={clients}
           selectedClient={selectedClient}
           deletedClient={deletedClient}
